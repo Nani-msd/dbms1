@@ -1,0 +1,143 @@
+<html>
+<head>
+	<title>Transition</title>
+</head>
+<style>
+	body{
+		margin:10px;
+		padding:0;
+		box-sizing: border-box;
+		background: #ffcccc;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		border: 5px solid black;
+	}
+    h1{
+    	text-align: center;
+    	font-size:4rem; 
+    	text-decoration: underline;
+    }
+    h2{
+    	font-size: 2rem;
+    	transition: all 0.4s linear;
+    }
+    .h2:hover{
+    	transform: translate(30px);
+    	color:red;
+    }
+    ul li{
+    	font-size: 1.5rem;
+    	transition: all 0.4s linear;
+    }
+    ul li:hover{
+    	transform: translate(30px);
+    	color:red;
+    }
+    p{
+    	font-size: 1.5rem;
+    	text-align:  left;
+    }
+    img{
+    	width:900px;
+    	display: block;
+    }
+    .nani{
+        margin: 5rem;
+    }
+    .head{
+    	text-decoration: underline;
+    	transition: all 0.4s linear;
+    }
+    .head:hover{
+    	transform: translate(30px);
+    	color:red;
+    	text-decoration: none;
+    }
+    #copy{
+    	text-align: center;
+    }
+    #nice{
+    	text-align: center;
+    	color: red;
+    	font-size: 1.5rem;
+    	transition: all 0.4s linear;
+    }
+    #nice:hover{
+    	font-size: 2rem;
+    	color: blue;
+    }
+</style>
+<body>
+	<h1 style="margin-top: 50px">JOINS</h1>
+<div class="nani">
+	<p> In case of SQL, JOIN means "to combine two or more tables".<br>
+          In SQL, JOIN clause is used to combine the records from two or more tables in a database</p>
+	<h2>Types of SQL Joins : </h2>
+	<ul>
+		<li>Inner Join</li>
+		<li>Left Outer Join</li>
+		<li>Right Outer Join</li>
+		<li>Full Outer Join</li>
+	</ul>
+	<img src="1.jpeg" style="margin-bottom: 30px">
+	<img src="2.jpeg">
+	<h2 class="h2">Inner Join :</h2>
+	<p>In SQL, INNER JOIN selects records that have matching values in both tables as long as the condition is satisfied. It returns the combination of all rows from both the tables where the condition satisfies.</p>
+	<p class="head">Syntax :</p>
+	<p>SELECT table1.column1, table1.column2, table2.column1,....<br>  
+       FROM table1  <br> 
+       INNER JOIN table2 <br> 
+       ON table1.matching_column = table2.matching_column; </p>
+	<p class="head">Example :</p>
+	<p>SELECT EMPLOYEE.EMP_NAME, PROJECT.DEPARTMENT<br>   
+FROM EMPLOYEE <br> 
+INNER JOIN PROJECT<br>  
+ON PROJECT.EMP_ID = EMPLOYEE.EMP_ID; </p>
+	<img src="3.jpeg">
+	<h2 class="h2">Left Outer Join :</h2>
+	<p>The SQL left join returns all the values from left table and the matching values from the right table. If there is no matching join value, it will return NULL.</p>
+	<p class="head">Syntax :</p>
+	<p>SELECT table1.column1, table1.column2, table2.column1,.... <br> 
+FROM table1   <br>
+LEFT JOIN table2 <br> 
+ON table1.matching_column = table2.matching_column;  </p>
+	<p class="head">Example :</p>
+	<p>SELECT EMPLOYEE.EMP_NAME, PROJECT.DEPARTMENT <br>  
+FROM EMPLOYEE  <br>
+LEFT JOIN PROJECT  <br>
+ON PROJECT.EMP_ID = EMPLOYEE.EMP_ID; </p>
+	<img src="4.jpeg">
+	<h2 class="h2">Right Outer Join :</h2>
+	<p>In SQL, RIGHT JOIN returns all the values from the values from the rows of right table and the matched values from the left table. If there is no matching in both tables, it will return NULL.</p>
+	<p class="head">Syntax :</p>
+	<p>SELECT table1.column1, table1.column2, table2.column1,....  <br>
+FROM table1   <br>
+RIGHT JOIN table2  <br>
+ON table1.matching_column = table2.matching_column;  </p>
+	<p class="head">Example :</p>
+	<p>SELECT EMPLOYEE.EMP_NAME, PROJECT.DEPARTMENT  <br> 
+FROM EMPLOYEE  <br>
+RIGHT JOIN PROJECT  <br>
+ON PROJECT.EMP_ID = EMPLOYEE.EMP_ID;  </p>
+	<img src="5.jpeg">
+	<h2 class="h2">Full Outer Join :</h2>
+	<p>In SQL, FULL JOIN is the result of a combination of both left and right outer join. Join tables have all the records from both tables. It puts NULL on the place of matches not found.</p>
+	<p class="head">Syntax :</p>
+	<p>SELECT table1.column1, table1.column2, table2.column1,.... <br> 
+FROM table1   <br>
+FULL JOIN table2  <br>
+ON table1.matching_column = table2.matching_column;  </p>
+	<p class="head">Example :</p>
+	<p>SELECT EMPLOYEE.EMP_NAME, PROJECT.DEPARTMENT<br>   
+FROM EMPLOYEE  <br>
+FULL JOIN PROJECT <br>  
+ON PROJECT.EMP_ID = EMPLOYEE.EMP_ID;  </p>
+	<img src="6.jpeg">
+	<h1>ThanQ</h1>
+	<p id="nice">Trust No One</p>
+	<p id="copy">Copyright&copy</p>
+</div>
+</body>
+</html>
